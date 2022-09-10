@@ -1,0 +1,1284 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model List<Product>
+	<section id="hero">
+			<div class="container">
+				<div class="sliders">
+					<div class="d-flex justify-content-between slider-item">
+						<div class="slider-left">
+							<div class="hero-text">
+								<h1>BEST DEAL !</h1>
+								<h2>SMART WATCH BRACELET</h2>
+								<p>Get up to <span>50%</span> off Today Only</p>
+								<button class="shop">SHOP NOW</button>
+							</div>
+						</div>
+						<div class="slider-image">
+							<img src="~~/assests/images/slider 1.png" alt="">
+						</div>
+					</div>
+					<div class="d-flex justify-content-between slider-item">
+						<div class="slider-left">
+							<div class="hero-text">
+								<h1>BEST DEAL ! 2</h1>
+								<h2>SMART WATCH BRACELET</h2>
+								<p>Get up to <span>50%</span> off Today Only</p>
+								<button class="shop">SHOP NOW</button>
+							</div>
+						</div>
+						<div class="slider-image">
+							<img src="~/assests/images/slider 1.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section id="deals">  
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10">
+						<div class="deals-top">
+							<h1> <strong>Super Deals</strong> End in </h1>
+							<h5>View More <i class="fa-solid fa-angle-right"></i></h5> 
+							<div id="countdown">
+								<div id='tiles'></div>
+								<div class="labels">
+								  <li>Hours</li>
+								  <li>Mins</li>
+								  <li>Secs</li>
+								</div>
+							  </div>
+						</div>
+					</div>
+					<div class="deals-bottom">
+						<div class="row">
+						   @foreach (var item in Model)
+						   {	
+							<div style="margin-left: 27px;" class="col-lg-2 col-5">
+								<div class="deal-item">
+									<div class="deal-img">
+										<img src="assests/images/@item.ImageUrl" alt="">
+										<div class="sale">
+											<span>Sale!</span>
+										</div>
+									</div>
+									<div class="deal-info">
+										<h4>
+
+											<a asp-controller="Home" asp-action="index" asp-route-id="@item.Id">@item.Name</a> 
+										</h4>
+										 <p class="card-pr"><span style="color: #ec8d54">US @item.Price</span> <span class="sp">|</span> { 2% off } </p>
+									</div>
+									<div class="prod-icon">
+										<i class="fa-solid fa-eye"></i>
+										<i class="fa-regular fa-heart"></i>
+										<i class="fa-solid fa-rotate-left"></i>								</div>
+									<div class="add addToCart">ADD TO CART</div>
+								</div>
+							</div>
+						   }
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<hr>
+		<section id="money">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="money-icon">
+							<img src="~/assests/images/money-icon.png" alt="">
+						</div>
+						<div class="money-text">
+							<h4>Free Shipping On Over $ 50</h4>
+							<p>Agricultural mean crops livestock</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="money-icon">
+							<img src="~/assests/images/money-icon2.png" alt="">
+						</div>
+						<div class="money-text">
+							<h4>Membership Discount</h4>
+							<p>Only MemberAgricultural livestock</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="money-icon">
+							<img src="~/assests/images/money-icon3.png" alt="">
+						</div>
+						<div class="money-text">
+							<h4>Money Return</h4>
+							<p>30 days money back guarantee</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="money-icon">
+							<img src="~/assests/images/money-icon4.png" alt="">
+						</div>
+						<div class="money-text">
+							<h4>Online Support</h4>
+							<p>24/7 days support guarantee</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section id="day">
+			<div class="row">
+				<div class="col-lg-2">
+					<div class="day-left">
+						<div class="day-right">
+							<div class="top">
+								<div class="top-left">
+									<h5>55 NEWEST PRODUCTS</h5>
+									<h2>DEALS OF THE DAY</h2>
+									<span><hr></span>
+								</div>
+								<div class="top-right">
+									<h5>View All</h5>
+								</div>
+							</div>
+						</div>
+						<div class="day-left1-img">
+								<img src="assests/images/day 1.jpg" alt=""> 
+							<div class="overlay">
+								<div class="day-left-text">
+									<h4>MODERN PRODUCTS</h4>
+									<h2>Modern ideas for <br> Electronic Shops</h2>
+									<p>300+ modern products</p>
+									<button>VIEW MORE</button>
+								</div> 
+							</div>
+						</div>
+						<div class="day-left1-img">
+								<img src="assests/images/day2.jpg" alt="">
+							<div class="overlay">
+								<div class="day-left-text">
+									<h4>SAMSUNG TELEPHONES</h4>
+									<h2>You won't believe <br> your eyes</h2>
+									<button>VIEW MORE</button>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-10">
+					
+				<div class="owl-carousel owl-theme position-relative" id="popularProducts">
+					<div class="col-lg-3">
+						<div class="all-card">
+							<div class="popular-img">
+								<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+							</div>
+							<div class="popular-body">
+								<h4>Apple 256GB</h4>
+								<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+								<hr>
+							</div>
+							<div class="popular-sold">
+								<h5>Total sold : 10</h5>
+								<h5>Stocks : 530</h5>
+							</div>
+							<div class="progress">
+								<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							  </div>
+							<div class="hurry">
+								<p><span>Hurry Up</span> Limited Time Offer</p>
+							</div>
+							<div class="coming-time d-flex">
+								<div class="time-day">
+									<span>00</span> DAY
+								</div>
+								<div class="time-hour">
+									<span>00</span> HR
+								</div>
+								<div class="time-min">
+									<span>00</span> MIN
+								</div>
+								<div class="time-sec">
+									<span>00</span> SEC
+								</div>
+							</div>
+							<div class="popular-sale">
+								<span>Sale!</span>
+							</div>
+							<div class="card-icon">
+									<i class="fa-solid fa-eye"></i>
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-solid fa-rotate-left"></i>
+							</div>
+							<div class="popular-add">ADD TO CART</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="all-card">
+							<div class="popular-img">
+								<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+							</div>
+							<div class="popular-body">
+								<h4>Apple 256GB</h4>
+								<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+								<hr>
+							</div>
+							<div class="popular-sold">
+								<h5>Total sold : 10</h5>
+								<h5>Stocks : 530</h5>
+							</div>
+							<div class="progress">
+								<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							  </div>
+							<div class="hurry">
+								<p><span>Hurry Up</span> Limited Time Offer</p>
+							</div>
+							<div class="coming-time d-flex">
+								<div class="time-day">
+									<span>00</span> DAY
+								</div>
+								<div class="time-hour">
+									<span>00</span> HR
+								</div>
+								<div class="time-min">
+									<span>00</span> MIN
+								</div>
+								<div class="time-sec">
+									<span>00</span> SEC
+								</div>
+							</div>
+							<div class="popular-sale">
+								<span>Sale!</span>
+							</div>
+							<div class="card-icon">
+									<i class="fa-solid fa-eye"></i>
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-solid fa-rotate-left"></i>
+							</div>
+							<div class="popular-add">ADD TO CART</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="all-card">
+							<div class="popular-img">
+								<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+							</div>
+							<div class="popular-body">
+								<h4>Apple 256GB</h4>
+								<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+								<hr>
+							</div>
+							<div class="popular-sold">
+								<h5>Total sold : 10</h5>
+								<h5>Stocks : 530</h5>
+							</div>
+							<div class="progress">
+								<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							  </div>
+							<div class="hurry">
+								<p><span>Hurry Up</span> Limited Time Offer</p>
+							</div>
+							<div class="coming-time d-flex">
+								<div class="time-day">
+									<span>00</span> DAY
+								</div>
+								<div class="time-hour">
+									<span>00</span> HR
+								</div>
+								<div class="time-min">
+									<span>00</span> MIN
+								</div>
+								<div class="time-sec">
+									<span>00</span> SEC
+								</div>
+							</div>
+							<div class="popular-sale">
+								<span>Sale!</span>
+							</div>
+							<div class="card-icon">
+									<i class="fa-solid fa-eye"></i>
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-solid fa-rotate-left"></i>
+							</div>
+							<div class="popular-add">ADD TO CART</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="all-card">
+							<div class="popular-img">
+								<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+							</div>
+							<div class="popular-body">
+								<h4>Apple 256GB</h4>
+								<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+								<hr>
+							</div>
+							<div class="popular-sold">
+								<h5>Total sold : 10</h5>
+								<h5>Stocks : 530</h5>
+							</div>
+							<div class="progress">
+								<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							  </div>
+							<div class="hurry">
+								<p><span>Hurry Up</span> Limited Time Offer</p>
+							</div>
+							<div class="coming-time d-flex">
+								<div class="time-day">
+									<span>00</span> DAY
+								</div>
+								<div class="time-hour">
+									<span>00</span> HR
+								</div>
+								<div class="time-min">
+									<span>00</span> MIN
+								</div>
+								<div class="time-sec">
+									<span>00</span> SEC
+								</div>
+							</div>
+							<div class="popular-sale">
+								<span>Sale!</span>
+							</div>
+							<div class="card-icon">
+									<i class="fa-solid fa-eye"></i>
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-solid fa-rotate-left"></i>
+							</div>
+							<div class="popular-add">ADD TO CART</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="all-card">
+							<div class="popular-img">
+								<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+							</div>
+							<div class="popular-body">
+								<h4>Apple 256GB</h4>
+								<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+								<hr>
+							</div>
+							<div class="popular-sold">
+								<h5>Total sold : 10</h5>
+								<h5>Stocks : 530</h5>
+							</div>
+							<div class="progress">
+								<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							  </div>
+							<div class="hurry">
+								<p><span>Hurry Up</span> Limited Time Offer</p>
+							</div>
+							<div class="coming-time d-flex">
+								<div class="time-day">
+									<span>00</span> DAY
+								</div>
+								<div class="time-hour">
+									<span>00</span> HR
+								</div>
+								<div class="time-min">
+									<span>00</span> MIN
+								</div>
+								<div class="time-sec">
+									<span>00</span> SEC
+								</div>
+							</div>
+							<div class="popular-sale">
+								<span>Sale!</span>
+							</div>
+							<div class="card-icon">
+									<i class="fa-solid fa-eye"></i>
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-solid fa-rotate-left"></i>
+							</div>
+							<div class="popular-add">ADD TO CART</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="all-card">
+							<div class="popular-img">
+								<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+							</div>
+							<div class="popular-body">
+								<h4>Apple 256GB</h4>
+								<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+								<hr>
+							</div>
+							<div class="popular-sold">
+								<h5>Total sold : 10</h5>
+								<h5>Stocks : 530</h5>
+							</div>
+							<div class="progress">
+								<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							  </div>
+							<div class="hurry">
+								<p><span>Hurry Up</span> Limited Time Offer</p>
+							</div>
+							<div class="coming-time d-flex">
+								<div class="time-day">
+									<span>00</span> DAY
+								</div>
+								<div class="time-hour">
+									<span>00</span> HR
+								</div>
+								<div class="time-min">
+									<span>00</span> MIN
+								</div>
+								<div class="time-sec">
+									<span>00</span> SEC
+								</div>
+							</div>
+							<div class="popular-sale">
+								<span>Sale!</span>
+							</div>
+							<div class="card-icon">
+									<i class="fa-solid fa-eye"></i>
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-solid fa-rotate-left"></i>
+							</div>
+							<div class="popular-add">ADD TO CART</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</section>
+		<section id="Product">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="product-top">
+							<h3>Featured Products</h3>
+							<p style="color: #ec8d54" >View All</p>
+						</div>
+						<hr>
+						<div class="product-bottom">
+							<div class="product-img">
+								<img src="~/assests/images/index-item 1.jpg" alt="">
+								<div class="product-sale">
+									<span>Sale!</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<h4>Apple 256GB</h4>
+								<p><span style="color: #ec8d54">US $149.00</span></p>
+								<div class="product-rating">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="product-top">
+							<h3>Newest Products</h3>
+							<p style="color: #ec8d54" >View All</p>
+						</div>
+						<hr>
+						<div class="product-bottom">
+							<div class="product-img">
+								<img src="~/assests/images/index-item7.jpg" alt="">
+								<div class="product-sale">
+									<span>Sale!</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<h4>M5 Smart <br> Monitor</h4>
+								<p><span style="color: #ec8d54">US $99.00</span></p>
+								<div class="product-rating">
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="product-top">
+							<h3>Top Rated Products</h3>
+							<p style="color: #ec8d54" >View All</p>
+						</div>
+						<hr>
+						<div class="product-bottom">
+							<div class="product-img">
+								<img src="~/assests/images/index-item 4.jpg" alt="">
+								<div class="product-sale">
+									<span>Sale!</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<h4>Portable Wi-Fi <br> Speaker</h4>
+								<p><span style="color: #ec8d54">US $32.00</span></p>
+								<div class="product-rating">
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="product-top">
+							<h3>On Sale Products</h3>
+							<p style="color: #ec8d54" >View All</p>
+						</div>
+						<hr>
+						<div class="product-bottom">
+							<div class="product-img">
+								<img src="~/assests/images/index-item 1.jpg" alt="">
+								<div class="product-sale">
+									<span>Sale!</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<h4>Apple 256GB</h4>
+								<p><span style="color: #ec8d54">US $149.00</span></p>
+								<div class="product-rating">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="product-bottom">
+							<div class="product-img">
+								<img src="~/assests/images/index-item 2.jpg" alt="">
+								<div class="product-sale">
+									<span>Sale!</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<h4>Composite Product</h4>
+								<p><span style="color: #ec8d54">US $64.00</span></p>
+								<div class="product-rating">
+									<i class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="product-bottom">
+							<div class="product-img">
+								<img src="~/assests/images/lg-ph30n-led-projector.jpg" alt="">
+								<div class="product-sale">
+									<span>Sale!</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<h4>LED Projector</h4>
+								<p><span style="color: #ec8d54">US $85.00</span></p>
+								<div class="product-rating">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="product-bottom">
+							<div class="product-img">
+								<img src="~/assests/images/index-item 1.jpg" alt="">
+								<div class="product-sale">
+									<span>Sale!</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<h4>Apple Iphone 13 <br> Black</h4>
+								<p><span style="color: #ec8d54">US $149.00</span></p>
+								<div class="product-rating">
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="product-bottom">
+							<div class="product-img">
+								<img src="~/assests/images/index-item 2.jpg" alt="">
+								<div class="product-sale">
+									<span>Sale!</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<h4>Composite Product</h4>
+								<p><span style="color: #ec8d54">US $64.00</span></p>
+								<div class="product-rating">
+									<i class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+									<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="selling">
+			<div class="container">
+				<div class="row">
+					<div class="selling-top">
+						<p style="color: #ec8d54">EXCLUSIVE COLLECTION</p>
+						<h1>BEST SELLING PRODUCTS</h1>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-8 col-filter">
+						<div class="selling-menu mb-60">
+							<ul>
+								<li class="active1" data-filter="*" >ALL</li>
+								<li data-filter=".gaming" >GAMING</li>
+								<li data-filter=".accessories" >ACCESSORIES</li>
+								<li data-filter=".featured" >FEATURED</li>
+								<li data-filter=".hot-sell" >HOT SELL</li>
+								<li data-filter=".trend" >TREND</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="selling-left-image">
+							<div class="test-shine"></div>
+							<img src="~/assests/images/selling-sol-banner.png" alt="">
+						</div>
+					</div>
+					<div class="col-lg-9">
+						<div class="row">
+								<div class="col-md-4 selling-item">
+									<div class="selling-card">
+										<div class="selling-card">
+											<img src="~/assests/images/selling-hotsell-televizor-hover.jpg" alt="">
+											<img class="sel-img" src="~/assests/images/selling-hotsell-televizor.jpg" alt="Card image cap">
+											<div class="card-icon">
+												<i class="fa-solid fa-eye"></i>
+												<i class="fa-regular fa-heart"></i>
+												<i class="fa-solid fa-rotate-left"></i></div>
+										<div class="card-add">ADD TO CART</div>
+										<div class="card-body">
+												<hr>
+											<div class="card-sale">
+												<span>Sale!</span>
+											</div>
+											<div class="card-faiz">
+												<span>50%</span>
+											</div>
+											<div class="sell-top">
+												<div class="selling-rating">
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i> 
+												</div>
+												<div class="selling-old-price">
+													<p><del>$50.00</del></p> 
+												</div>
+											</div>
+											<div class="sell-bottom">
+												<div class="selling-name">
+													<h5>Smart Televisions</h5>
+												</div>
+												<div class="selling-new-price">
+													<p><span style="color: #ec8d54">$25.00</span></p>
+												</div>
+											</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 selling-item">
+									<div class="selling-card">
+										<div class="selling-card">
+											<img src="~/assests/images/selling-item-acces-camera-hover.jpg" alt="">
+											<img class="sel-img" src="~/assests/images/selling-item-acces-camera.jpg" alt="Card image cap">
+											<div class="card-icon">
+												<i class="fa-solid fa-eye"></i>
+												<i class="fa-regular fa-heart"></i>
+												<i class="fa-solid fa-rotate-left"></i></div>
+										<div class="card-add">ADD TO CART</div>
+										<div class="card-body">
+												<hr>
+											<div class="card-sale">
+												<span>Discount</span>
+											</div>
+											<div class="card-faiz">
+												<span>10%</span>
+											</div>
+											<div class="sell-top">
+												<div class="selling-rating">
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i> 
+												</div>
+												<div class="selling-old-price">
+													<p><del>$20.00</del></p> 
+												</div>
+											</div>
+											<div class="sell-bottom">
+												<div class="selling-name">
+													<h5>Surveillance Camera</h5>
+												</div>
+												<div class="selling-new-price">
+													<p><span style="color: #ec8d54">$18.00</span></p>
+												</div>
+											</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 selling-item">
+									<div class="selling-card">
+										<div class="selling-card">
+											<img src="~/assests/images/selling-acc2-sound-hover.jpg" alt="">
+											<img class="sel-img" src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+											<div class="card-icon">
+												<i class="fa-solid fa-eye"></i>
+												<i class="fa-regular fa-heart"></i>
+												<i class="fa-solid fa-rotate-left"></i></div>
+										<div class="card-add">ADD TO CART</div>
+										<div class="card-body">
+												<hr>
+											<div class="card-sale">
+												<span>Sale!</span>
+											</div>
+											<div class="card-faiz">
+												<span>57%</span>
+											</div>
+											<div class="sell-top">
+												<div class="selling-rating">
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i> 
+												</div>
+												<div class="selling-old-price">
+													<p><del>$35.00</del></p> 
+												</div>
+											</div>
+											<div class="sell-bottom">
+												<div class="selling-name">
+													<h5>Sound Equipment</h5>
+												</div>
+												<div class="selling-new-price">
+													<p><span style="color: #ec8d54">$15.00</span></p>
+												</div>
+											</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 selling-item">
+									<div class="selling-card">
+										<div class="selling-card">
+											<img class="sel-img" src="~/assests/images/selling-acces3-saat.jpg" alt="">
+											<img  src="~/assests/images/special saat.jpg" alt="Card image cap">
+											<div class="card-icon">
+												<i class="fa-solid fa-eye"></i>
+												<i class="fa-regular fa-heart"></i>
+												<i class="fa-solid fa-rotate-left"></i></div>
+										<div class="card-add">ADD TO CART</div>
+										<div class="card-body">
+												<hr>
+											<div class="sell-top">
+												<div class="selling-rating">
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+												</div>
+											</div>
+											<div class="sell-bottom">
+												<div class="selling-name">
+													<h5>Smart Watch External</h5>
+												</div>
+												<div class="selling-new-price">
+													<p><span style="color: #ec8d54">$69.00</span></p>
+												</div>
+											</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 selling-item">
+									<div class="selling-card">
+										<div class="selling-card">
+											<img src="~/assests/images/selling-gaming1.jpg" alt="">
+											<img class="sel-img" src="~/assests/images/selling-gaming-hover.jpeg" alt="Card image cap">
+											<div class="card-icon">
+												<i class="fa-solid fa-eye"></i>
+												<i class="fa-regular fa-heart"></i>
+												<i class="fa-solid fa-rotate-left"></i></div>
+										<div class="card-add">ADD TO CART</div>
+										<div class="card-body">
+												<hr>
+											<div class="sell-top">
+												<div class="selling-rating">
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i> 
+												</div>
+												<div class="selling-old-price">
+													<p><del>$50.00</del></p> 
+												</div>
+											</div>
+											<div class="sell-bottom">
+												<div class="selling-name">
+													<h5>Samsung Smart Phone</h5>
+												</div>
+												<div class="selling-new-price">
+													<p><span style="color: #ec8d54">$25.00</span></p>
+												</div>
+											</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 selling-item">
+									<div class="selling-card">
+										<div class="selling-card">
+											<img src="~/assests/images/selling-gaming-phone2.jpg" alt="">
+											<img class="sel-img" src="~/assests/images/selling-gaming-phone2 hover.jpg" alt="Card image cap">
+										<div class="card-body">
+												<hr>
+											<div class="card-sale">
+												<span>Sale!</span>
+											</div>
+											<div class="card-faiz">
+												<span>18%</span>
+											</div>
+											<div class="card-icon">
+												<i class="fa-solid fa-eye"></i>
+												<i class="fa-regular fa-heart"></i>
+												<i class="fa-solid fa-rotate-left"></i>
+										</div>
+										<div class="card-add">ADD TO CART</div>
+											<div class="sell-top">
+												<div class="selling-rating">
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													<i style="color:#ffa800;" class="fa-solid fa-star"></i> 
+												</div>
+												<div class="selling-old-price">
+													<p><del>$55.00</del></p> 
+												</div>
+											</div>
+											<div class="sell-bottom">
+												<div class="selling-name">
+													<h5>Oppo Reno3 Pro</h5>
+												</div>
+												<div class="selling-new-price">
+													<p><span style="color: #ec8d54">$45.00</span></p>
+												</div>
+											</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+		
+			</div>
+		</section>
+		<section id="popular">
+			<div class="container">
+					<div class="popular-top">
+						<p style="color: #ec8d54">EXCLUSIVE COLLECTION</p>
+						<h1>MOST POPULAR VIEWED</h1>
+					</div>
+			</div>
+			<div class="owl-carousel owl-theme position-relative" id="popularProducts2">
+				<div class="all-card">
+					<div class="popular-img">
+						<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+					</div>
+					<div class="popular-body">
+						<h4>Apple 256GB</h4>
+						<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+						<hr>
+					</div>
+					<div class="popular-sold">
+						<h5>Total sold : 10</h5>
+						<h5>Stocks : 530</h5>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					  </div>
+					<div class="hurry">
+						<p><span>Hurry Up</span> Limited Time Offer</p>
+					</div>
+					<div class="coming-time d-flex">
+						<div class="time-day">
+							<span>00</span> DAY
+						</div>
+						<div class="time-hour">
+							<span>00</span> HR
+						</div>
+						<div class="time-min">
+							<span>00</span> MIN
+						</div>
+						<div class="time-sec">
+							<span>00</span> SEC
+						</div>
+					</div>
+					<div class="popular-sale">
+						<span>Sale!</span>
+					</div>
+					<div class="card-icon">
+							<i class="fa-solid fa-eye"></i>
+							<i class="fa-regular fa-heart"></i>
+							<i class="fa-solid fa-rotate-left"></i>
+					</div>
+					<div class="popular-add">ADD TO CART</div>
+				</div>
+				<div class="all-card">
+					<div class="popular-img">
+						<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+					</div>
+					<div class="popular-body">
+						<h4>Apple 256GB</h4>
+						<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+						<hr>
+					</div>
+					<div class="popular-sold">
+						<h5>Total sold : 10</h5>
+						<h5>Stocks : 530</h5>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					  </div>
+					<div class="hurry">
+						<p><span>Hurry Up</span> Limited Time Offer</p>
+					</div>
+					<div class="coming-time d-flex">
+						<div class="time-day">
+							<span>00</span> DAY
+						</div>
+						<div class="time-hour">
+							<span>00</span> HR
+						</div>
+						<div class="time-min">
+							<span>00</span> MIN
+						</div>
+						<div class="time-sec">
+							<span>00</span> SEC
+						</div>
+					</div>
+					<div class="popular-sale">
+						<span>Sale!</span>
+					</div>
+					<div class="card-icon">
+							<i class="fa-solid fa-eye"></i>
+							<i class="fa-regular fa-heart"></i>
+							<i class="fa-solid fa-rotate-left"></i>
+					</div>
+					<div class="popular-add">ADD TO CART</div>
+				</div>
+				<div class="all-card">
+					<div class="popular-img">
+						<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+					</div>
+					<div class="popular-body">
+						<h4>Apple 256GB</h4>
+						<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+						<hr>
+					</div>
+					<div class="popular-sold">
+						<h5>Total sold : 10</h5>
+						<h5>Stocks : 530</h5>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					  </div>
+					<div class="hurry">
+						<p><span>Hurry Up</span> Limited Time Offer</p>
+					</div>
+					<div class="coming-time d-flex">
+						<div class="time-day">
+							<span>00</span> DAY
+						</div>
+						<div class="time-hour">
+							<span>00</span> HR
+						</div>
+						<div class="time-min">
+							<span>00</span> MIN
+						</div>
+						<div class="time-sec">
+							<span>00</span> SEC
+						</div>
+					</div>
+					<div class="popular-sale">
+						<span>Sale!</span>
+					</div>
+					<div class="card-icon">
+							<i class="fa-solid fa-eye"></i>
+							<i class="fa-regular fa-heart"></i>
+							<i class="fa-solid fa-rotate-left"></i>
+					</div>
+					<div class="popular-add">ADD TO CART</div>
+				</div>
+				<div class="all-card">
+					<div class="popular-img">
+						<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+					</div>
+					<div class="popular-body">
+						<h4>Apple 256GB</h4>
+						<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+						<hr>
+					</div>
+					<div class="popular-sold">
+						<h5>Total sold : 10</h5>
+						<h5>Stocks : 530</h5>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					  </div>
+					<div class="hurry">
+						<p><span>Hurry Up</span> Limited Time Offer</p>
+					</div>
+					<div class="coming-time d-flex">
+						<div class="time-day">
+							<span>00</span> DAY
+						</div>
+						<div class="time-hour">
+							<span>00</span> HR
+						</div>
+						<div class="time-min">
+							<span>00</span> MIN
+						</div>
+						<div class="time-sec">
+							<span>00</span> SEC
+						</div>
+					</div>
+					<div class="popular-sale">
+						<span>Sale!</span>
+					</div>
+					<div class="card-icon">
+							<i class="fa-solid fa-eye"></i>
+							<i class="fa-regular fa-heart"></i>
+							<i class="fa-solid fa-rotate-left"></i>
+					</div>
+					<div class="popular-add">ADD TO CART</div>
+				</div>
+				<div class="all-card">
+					<div class="popular-img">
+						<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+					</div>
+					<div class="popular-body">
+						<h4>Apple 256GB</h4>
+						<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+						<hr>
+					</div>
+					<div class="popular-sold">
+						<h5>Total sold : 10</h5>
+						<h5>Stocks : 530</h5>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					  </div>
+					<div class="hurry">
+						<p><span>Hurry Up</span> Limited Time Offer</p>
+					</div>
+					<div class="coming-time d-flex">
+						<div class="time-day">
+							<span>00</span> DAY
+						</div>
+						<div class="time-hour">
+							<span>00</span> HR
+						</div>
+						<div class="time-min">
+							<span>00</span> MIN
+						</div>
+						<div class="time-sec">
+							<span>00</span> SEC
+						</div>
+					</div>
+					<div class="popular-sale">
+						<span>Sale!</span>
+					</div>
+					<div class="card-icon">
+							<i class="fa-solid fa-eye"></i>
+							<i class="fa-regular fa-heart"></i>
+							<i class="fa-solid fa-rotate-left"></i>
+					</div>
+					<div class="popular-add">ADD TO CART</div>
+				</div>
+				<div class="all-card">
+					<div class="popular-img">
+						<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+					</div>
+					<div class="popular-body">
+						<h4>Apple 256GB</h4>
+						<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+						<hr>
+					</div>
+					<div class="popular-sold">
+						<h5>Total sold : 10</h5>
+						<h5>Stocks : 530</h5>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					  </div>
+					<div class="hurry">
+						<p><span>Hurry Up</span> Limited Time Offer</p>
+					</div>
+					<div class="coming-time d-flex">
+						<div class="time-day">
+							<span>00</span> DAY
+						</div>
+						<div class="time-hour">
+							<span>00</span> HR
+						</div>
+						<div class="time-min">
+							<span>00</span> MIN
+						</div>
+						<div class="time-sec">
+							<span>00</span> SEC
+						</div>
+					</div>
+					<div class="popular-sale">
+						<span>Sale!</span>
+					</div>
+					<div class="card-icon">
+							<i class="fa-solid fa-eye"></i>
+							<i class="fa-regular fa-heart"></i>
+							<i class="fa-solid fa-rotate-left"></i>
+					</div>
+					<div class="popular-add">ADD TO CART</div>
+				</div>
+				<div class="all-card">
+					<div class="popular-img">
+						<img  src="~/assests/images/index-item 1.jpg" alt="Card image cap">
+					</div>
+					<div class="popular-body">
+						<h4>Apple 256GB</h4>
+						<p><span style="color: #ec8d54">US $149.00</span> <span class="sp">|</span> { 25% off } </p>
+						<hr>
+					</div>
+					<div class="popular-sold">
+						<h5>Total sold : 10</h5>
+						<h5>Stocks : 530</h5>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-warning" role="progressbar" style="width: 5%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					  </div>
+					<div class="hurry">
+						<p><span>Hurry Up</span> Limited Time Offer</p>
+					</div>
+					<div class="coming-time d-flex">
+						<div class="time-day">
+							<span>00</span> DAY
+						</div>
+						<div class="time-hour">
+							<span>00</span> HR
+						</div>
+						<div class="time-min">
+							<span>00</span> MIN
+						</div>
+						<div class="time-sec">
+							<span>00</span> SEC
+						</div>
+					</div>
+					<div class="popular-sale">
+						<span>Sale!</span>
+					</div>
+					<div class="card-icon">
+							<i class="fa-solid fa-eye"></i>
+							<i class="fa-regular fa-heart"></i>
+							<i class="fa-solid fa-rotate-left"></i>
+					</div>
+					<div class="popular-add">ADD TO CART</div>
+				</div>
+			</div>
+			
+		</section>
+		<section id="news">
+			<div class="news-top">
+				<p style="color: #ec8d54">BLOG & NEWS</p>
+				<h1>LATEST NEWS UPDATE</h1>
+			</div>
+			<div class="container">
+				<div class="row d-flex justify-content-between">
+					<div class="col-lg-3">
+					   <div class="news-bottom">
+							<div id="kart" class="card">
+								<img class="card-img-top" src="~/assests/images/news1.jpg" alt="Card image cap">
+								<div class="card-body">
+									<h2 class="card-title">Technology series-11 Controller</h2>
+									<div class="card-center">
+										<i class="fa-solid fa-user"></i> <span>ADMIN</span> <i class="fa-solid fa-calendar-days"></i> <span>04 MAY</span>
+									 </div>						        <p class="card-text">Namkand sodales vel online best prices <br> Amazon Check out ethnic wear, formal wear <br> western wear Blood Pressure Rate Monito.</p>
+									<h5>Read more</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="news-bottom">
+							 <div id="kart" class="card">
+								 <img class="card-img-top" src="~/assests/images/news2.jpg" alt="Card image cap">
+								 <div class="card-body">
+									 <h2 class="card-title">Technology series-10 Playstation</h2>
+									 <div class="card-center">
+										<i class="fa-solid fa-user"></i> <span>ADMIN</span> <i class="fa-solid fa-calendar-days"></i> <span>04 MAY</span>
+									 </div>								 <p class="card-text">Namkand sodales vel online best prices <br> Amazon Check out ethnic wear, formal wear <br> western wear Blood Pressure Rate Monito.</p>
+									 <h5>Read more</h5>
+								 </div>
+							 </div>
+						 </div>
+					 </div>
+					 <div class="col-lg-3">
+						<div class="news-bottom">
+							 <div id="kart" class="card">
+								 <img class="card-img-top" src="~/assests/images/news3.jpg" alt="Card image cap">
+								 <div class="card-body">
+									 <h2 class="card-title">Technology series-9 Game</h2>
+									 <div class="card-center">
+										<i class="fa-solid fa-user"></i> <span>ADMIN</span> <i class="fa-solid fa-calendar-days"></i> <span>04 MAY</span>
+									 </div>
+									 <p class="card-text">Namkand sodales vel online best prices <br> Amazon Check out ethnic wear, formal wear <br> western wear Blood Pressure Rate Monito.</p>
+									 <h5>Read more</h5>
+								 </div>
+							 </div>
+						 </div>
+					 </div>
+				</div>
+			</div>
+		</section>
+

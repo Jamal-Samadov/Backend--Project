@@ -1,0 +1,503 @@
+﻿@{
+    ViewData["Title"] = "Detail";
+}
+
+  <section id="shop">
+        <div class="container">
+            <div class="row">
+				<div class="contact-text">
+					<h1>SHOP</h1>
+					<p><span>Home</span><i class="fa-solid fa-circle"></i> <span>Contact</span> <i class="fa-solid fa-circle"></i> M5 Smart Monitor </p>
+				</div>
+			</div>
+        </div>
+    </section>
+	<section id="shop-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="contact-bottom">
+						<div class="shop-top-icon">
+							<div class="shop-top-left">
+								<i class="fa-solid fa-video"></i> <h4 style="color: #ec8d54;">Video</h4>
+							</div>
+							<div class="shop-icon-right">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</div>
+						</div>
+						<div class="shop-main-img">
+							<img src="/assests/images/@Model.ImageUrl" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="shop-top-main">
+						<div class="shop-product-top">
+							<p>Trend</p>
+							<p>19 In Stock</p>
+							<p style="background-color: #f7ba00;">23%</p>
+						
+						  <div class="product-acces">
+							<i class="fa-solid fa-arrow-left"></i>
+							<i class="fa-solid fa-table-columns"></i>
+							<i class="fa-solid fa-arrow-right"></i>
+						  </div>
+					   </div>
+					<div class="shop-product-name">
+						<h1>@Model.Name</h1>
+					</div>
+					<div class="product-rating">
+						@for (var i= 0;  i< Model.Rating; i++)
+						{
+						  <i style="color: #ff6100;" class="fa-solid fa-star"></i>
+						}
+						@for (var i = 0; i < 5 - Model.Rating; i++)
+					     {
+					    	<i class="fa-solid fa-star"></i>
+					     }
+					</div>
+					<div class="product-review">
+						<p style="color: #1696E7;">2 customer reviews</p>
+					</div>
+					<div class="product-price">
+						<h1>@Model.Price</h1> <del>$129.00</del>
+					</div>
+					<div class="product-info">
+						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+					</div>
+					<div class="hurry">
+						<p><span>Hurry Up</span> Limited Time Offer</p>
+					</div>
+					<div class="coming-time d-flex">
+						<div class="time-day">
+							<span>00</span> DAY
+						</div>
+						<div class="time-hour">
+							<span>00</span> HR
+						</div>
+						<div class="time-min">
+							<span>00</span> MIN
+						</div>
+						<div class="time-sec">
+							<span>00</span> SEC
+						</div>
+				    </div>
+					<div class="product-stock">
+						<div class="ordered">
+							<p>Ordered: <span style="color: #ff3300;">81</span></p>
+							<p>Items available: <span style="color: #ff3300;">19</span></p>
+						</div>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+					<div class="check-item">
+						<div class="check">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</div>
+						<div class="check-img">
+							<img src="/assests/images/check1.jpg" alt="">
+						</div>
+						<div class="check-info">
+							<p>This item: M5 Smart Monitor</p>
+						</div>
+						<div class="check-price">
+							<p>$129.00</p>
+							<p style="color: #ff3300;">$99.00</p>
+						</div>
+					</div>
+					<div class="check-item">
+						<div class="check">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</div>
+						<div class="check-img">
+							<img src="/assests/images/check2.jpg" alt="">
+						</div>
+						<div class="check-info">
+							<p>This item: M5 Smart Monitor</p>
+						</div>
+						<div class="check-price">
+							<p>$129.00</p>
+							<p style="color: #ff3300;">$99.00</p>
+						</div>
+					</div>
+					<div class="check-item">
+						<div class="check">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</div>
+						<div class="check-img">
+							<img src="/assests/images/check3.jpg" alt="">
+						</div>
+						<div class="check-info">
+							<p>This item: M5 Smart Monitor</p>
+						</div>
+						<div class="check-price">
+							<p>$129.00</p>
+							<p style="color: #ff3300;">$99.00</p>
+						</div>
+					</div>
+					<hr>
+					<div class="number-input">
+						<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+						<input class="quantity" min="0" name="quantity" value="1" type="number">
+						<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+					</div>
+					<input class="btn btn-danger" type="submit" value="ADD TO CART">
+				</div>
+				<div class="payment">
+					<div class="payment-left">
+						<i class="fa-solid fa-rotate"></i>
+						<p>Compare</p>
+					</div>
+					<div class="payment-right">
+						<i class="fa-solid fa-heart"></i>
+						<p>Add to Wishlist</p>
+					</div>
+				</div>
+				<hr>
+				<div class="product-size">
+					<i class="fa-solid fa-ruler"></i>
+					<p>Size Guide</p>
+					<i class="fa-solid fa-hand-holding-dollar"></i>
+					<p>Delivery & Return</p>
+					<i class="fa-solid fa-question"></i>
+					<p>Ask a Question</p>
+				</div>
+				<div class="product-delivery">
+					<i class="fa-solid fa-truck-medical"></i>
+					<p>
+						Estimated Delivery: 
+						<span style="color: #6d7673;">Aug 02 Aug 06</span>
+					</p> <br>
+					<i class="fa-solid fa-face-smile"></i>
+					<p>
+						82 people
+						<span style="color: #6d7673;">are viewing this right now</span>
+					</p>
+				</div>
+				<hr>
+				<div class="product-category">
+					<p>
+						SKU: 
+						<span >Aug 02 Aug 06</span>
+					</p> <br>
+					<p>
+						Categories: 
+						<span >Computer, Gaming, Hot Sell, TV & Smart Box</span>
+					</p> <br>
+					<p>
+						TAG: 
+						<span >Simple</span>
+					</p> <br>
+					<p>
+						Share: 
+						<img src="/assests/images/social_medias-removebg-preview.png" alt="">
+					</p> <br>
+					<p>
+						Brands: 
+						<span >Apple</span>
+					</p> <br>
+				</div>
+		    </div>
+	    </div>
+	</section>
+	<a id="button"></a>
+	<section id="description">
+		<div class="container">
+			<div class="row">
+				<div class="desc-all">
+					<div class="wrapper">
+						<div class="tabs">
+						  <div class="tab">
+							<input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+							<label for="tab-1" class="tab-label">Tab One</label>
+							<div class="tab-content"> <strong>Build With Elementor, easly!</strong> <br><br><br> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Vivamus bibendum magna Lorem ipsum dolor sit amet, consectetur adipiscing elit.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br>
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. <br>
+								<br> The complete template for ecommerce! <br>
+								Responsive & AJAX WooCommerce. Theme <br>
+								Advanced Theme Features</div>
+						  </div>
+						  <div class="tab">
+							<input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
+							<label for="tab-2" class="tab-label">Tab Two</label>
+							<div class="tab-content">
+								<table class="table table-striped" cellspacing="0">
+									<tbody>
+										<tr>
+											<td>Color</td>
+											<td>Size</td>
+										</tr>
+										<tr>
+											<td style="color:#1696E7"><em>Black, Blue, Pink, Yellow</em></td>
+											<td><em>L, M, S, XL, XS</em></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						  </div>
+						  <div class="tab">
+							<input type="radio" name="css-tabs" id="tab-3" class="tab-switch">
+							<label for="tab-3" class="tab-label">Tab Three</label>
+							<div class="tab-content">When I left Mr. Bates, I went down to my father: where, by the assistance of him and my uncle John, and some other relations, I got forty pounds, and a promise of thirty pounds a year to maintain me at Leyden: there I studied physic two years and seven months, knowing it would be useful in long voyages.</div>
+						  </div>
+						</div>
+					  </div>
+				</div>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/KiAJUD5melc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>
+	<section id="together">
+		<div class="container">
+			<div class="row">
+				<div class="together-all">
+					<div class="together-top">
+						<h1>Items That Are Usually Sold Together</h1>
+						<hr>
+					</div>
+					<div class="together-bottom">
+						    <div class="row">
+									<div class="col-lg-2 selling-item">
+										<div class="selling-card">
+											<div class="selling-card">
+												<img src="/assests/images/selling-hotsell-televizor-hover.jpg" alt="">
+												<img class="sel-img" src="/assests/images/selling-hotsell-televizor.jpg" alt="Card image cap">
+												<div class="card-icon">
+													<i class="fa-solid fa-eye"></i>
+													<i class="fa-regular fa-heart"></i>
+													<i class="fa-solid fa-rotate-left"></i></div>
+											<div class="card-add">ADD TO CART</div>
+											<div class="card-body">
+												<div class="sell-top">
+													<div class="selling-rating">
+														<i class="fa-solid fa-star"></i>
+														<i class="fa-solid fa-star"></i>
+														<i class="fa-solid fa-star"></i>
+														<i class="fa-solid fa-star"></i>
+														<i class="fa-solid fa-star"></i> 
+													</div>
+													<div class="selling-old-price">
+														<p><del>$50.00</del></p> 
+													</div>
+												</div>
+												<div class="sell-bottom">
+													<div class="selling-name">
+														<h5>Smart Televisions</h5>
+													</div>
+													<div class="selling-new-price">
+														<p><span style="color: #ec8d54">$25.00</span></p>
+													</div>
+												</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 selling-item">
+										<div class="selling-card">
+											<div class="selling-card">
+												<img src="/assests/images/selling-item-acces-camera-hover.jpg" alt="">
+												<img class="sel-img" src="/assests/images/selling-item-acces-camera.jpg" alt="Card image cap">
+												<div class="card-icon">
+													<i class="fa-solid fa-eye"></i>
+													<i class="fa-regular fa-heart"></i>
+													<i class="fa-solid fa-rotate-left"></i></div>
+											<div class="card-add">ADD TO CART</div>
+											<div class="card-body">
+												<div class="sell-top">
+													<div class="selling-rating">
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i> 
+													</div>
+													<div class="selling-old-price">
+														<p><del>$20.00</del></p> 
+													</div>
+												</div>
+												<div class="sell-bottom">
+													<div class="selling-name">
+														<h5>Surveillance Camera</h5>
+													</div>
+													<div class="selling-new-price">
+														<p><span style="color: #ec8d54">$18.00</span></p>
+													</div>
+												</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 selling-item">
+										<div class="selling-card">
+											<div class="selling-card">
+												<img src="/assests/images/selling-acc2-sound-hover.jpg" alt="">
+												<img class="sel-img" src="/assests/images/index-item 1.jpg" alt="Card image cap">
+												<div class="card-icon">
+													<i class="fa-solid fa-eye"></i>
+													<i class="fa-regular fa-heart"></i>
+													<i class="fa-solid fa-rotate-left"></i></div>
+											<div class="card-add">ADD TO CART</div>
+											<div class="card-body">
+												<div class="sell-top">
+													<div class="selling-rating">
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i> 
+													</div>
+													<div class="selling-old-price">
+														<p><del>$35.00</del></p> 
+													</div>
+												</div>
+												<div class="sell-bottom">
+													<div class="selling-name">
+														<h5>Sound Equipment</h5>
+													</div>
+													<div class="selling-new-price">
+														<p><span style="color: #ec8d54">$15.00</span></p>
+													</div>
+												</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 selling-item">
+										<div class="selling-card">
+											<div class="selling-card">
+												<img class="sel-img" src="/assests/images/selling-acces3-saat.jpg" alt="">
+												<img  src="/assests/images/special saat.jpg" alt="Card image cap">
+												<div class="card-icon">
+													<i class="fa-solid fa-eye"></i>
+													<i class="fa-regular fa-heart"></i>
+													<i class="fa-solid fa-rotate-left"></i></div>
+											<div class="card-add">ADD TO CART</div>
+											<div class="card-body">
+												<div class="sell-top">
+													<div class="selling-rating">
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+														<i style="color:#ffa800;" class="fa-solid fa-star"></i>
+													</div>
+												</div>
+												<div class="sell-bottom">
+													<div class="selling-name">
+														<h5>Smart Watch External</h5>
+													</div>
+													<div class="selling-new-price">
+														<p><span style="color: #ec8d54">$69.00</span></p>
+													</div>
+												</div>
+												</div>
+											</div>
+										</div>
+									</div>
+						    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="view">
+		<div class="container">
+			<div class="row">
+				<div class="together-top">
+					<h1>Product Reviews</h1>
+					<hr>
+				</div>
+				<div id="vi-bot" class="col-lg-6">
+					<div class="view-bottom">
+						<p>Reviews</p>
+					</div>
+					<div class="user-img">
+						<img src="assests/images/admin-img.jpg" alt="">
+					</div>
+					<div class="user-who">
+						<div class="user-time">
+							<p>
+								admin 
+								<span >– August 29, 2021</span>
+							</p>
+						</div>
+						<div class="user-rating">
+							<i style="color: #ff6100;;" class="fa-solid fa-star"></i>
+							<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+							<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+							<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+							<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+						</div>
+					</div>
+					<div class="user-comment">
+						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has <br> roots in a piece of classical Latin literature from 45 BC, making it over <br> 2000 years old. Vivamus bibendum magna Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.Contrary to popular belief, Lorem Ipsum is not <br> simply random text. It has roots in a piece of classical Latin literature from <br> 45 BC, making it over 2000 years old.
+						</p>
+					</div>
+					<div class="user-img">
+						<img src="assests/images/admin-img.jpg" alt="">
+					</div>
+					<div class="user-who">
+						<div class="user-time">
+							<p>
+								admin 
+								<span >(verified owner) – September 7, 2021</span>
+							</p>
+						</div>
+						<div class="user-rating">
+							<i style="color: #ff6100;;" class="fa-solid fa-star"></i>
+							<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+							<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+							<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+							<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+						</div>
+					</div>
+					<div class="user-comment">
+						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has <br> roots in a piece of classical Latin literature from 45 BC, making it over <br> 2000 years old.
+						</p>
+					</div>
+				</div>
+				<div id="add" class="col-lg-6">
+					<div class="add-review">
+						<p>Add a review</p>
+					</div>
+					<div class="required">
+						<p>Your email address will not be published. Required fields are marked *</p>
+						<div class="add-rating">
+							<p>YOUR RATING *</p> <br>
+							<i style="color: #ff6100;;" class="fa-solid fa-star"></i>
+								<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+								<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+								<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+								<i style="color:#ff6100;" class="fa-solid fa-star"></i>
+						</div>
+					</div>
+					<select class="form-select" aria-label="Default select example">
+						<option selected>Rate...</option>
+						<option value="1">Perfect</option>
+						<option value="2">Good</option>
+						<option value="3">Average</option>
+						<option value="4">Not that bad</option>
+						<option value="5">Very poor</option>
+					</select>
+					<h4>YOUR REVIEW *</h4>
+					<textarea name="subject" id="subject" ></textarea>
+					<form action="">
+						<label class="nam" for="">NAME*</label>
+						<label class="em" for="">EMAIL*</label>
+					</form>
+					<form action="">
+						<input type="Name">
+						<input type="email">
+					</form>
+					<input class="add-check" type="checkbox"> 
+					<div class="add-save">
+						<p>Save my name, email, and website in this browser for the next time I comment.</p>
+					</div>
+					<input class="btn btn-danger" type="submit" value="Submit">
+				</div>
+			</div>
+		</div>
+	</section>
